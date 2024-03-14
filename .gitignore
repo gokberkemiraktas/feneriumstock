@@ -1,0 +1,18 @@
+# Geçici dosyalar
+*.tmp
+*.bak
+
+# Derleme çıktıları
+*.class
+*.jar
+*.war
+
+# Kullanıcı tarafından oluşturulan dosyalar
+config.ini
+credentials.json
+
+# Hassas bilgiler
+secret.key
+password.txt
+# Yeni eklenen dosya
+lock.json
