@@ -4,12 +4,12 @@ const nodemailer = require("nodemailer");
 
 // E-posta taşıyıcısını oluşturun
 const transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
-  port: 587,
-  secure: false, // Port 465 için `true`, diğer tüm portlar için `false` kullanın
+  host: "todo",
+  port: 465,
+  secure: true, // Port 465 için `true`, diğer tüm portlar için `false` kullanın
   auth: {
-    user: "maddison53@ethereal.email",
-    pass: "jn7jnAPss4f63QBp6D",
+    user: "todo",
+    pass: "todo",
   },
 });
 
@@ -57,11 +57,11 @@ function checkStock() {
 async function sendMail() {
     try {
         await transporter.sendMail({
-            from: '"Fenerium Stock Checker" <maddison53@ethereal.email>',
-            to: "receiver@example.com",
+            from: '"Fenerium Stock Checker" <todo>',
+            to: "todo",
             subject: "Ürün Stokta",
-            text: "M bedeni stokta.",
-            html: "<b>M bedeni stokta.</b>"
+            text: "M bedeni stokta. Ürün linki: https://fenerium.com/unisex-retro-sari-lacivert-efsane-mont-p-tk115ecs015lc",
+            html: "<b>M bedeni stokta. Ürün linki: <a href='https://fenerium.com/unisex-retro-sari-lacivert-efsane-mont-p-tk115ecs015lc'>Fenerium Ürün Sayfası</a></b>"
         });
         console.log("E-posta gönderildi.");
     } catch (error) {
