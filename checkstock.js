@@ -19,7 +19,7 @@ function checkStock() {
     https.get(url, (response) => {
         let data = '';
 
-        response.on('data', (chunk) => {
+        response.on('data', (chunk) => {sdfsdf
             data += chunk;
         });
 
